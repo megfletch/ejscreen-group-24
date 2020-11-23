@@ -29,6 +29,8 @@ ggplot(data = ces, aes(x = white_percent, y = ces_3_0_score)) +
 
 ```
 
+We can see a inverse relationship between the percentage of white residents in a census track and the CalEnviroScreen 3.0 score. Thus, the fewer white residents a census tract has, the more pollution it is likely to have and vice versa.
+
 
 
 
