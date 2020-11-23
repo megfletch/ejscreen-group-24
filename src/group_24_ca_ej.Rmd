@@ -8,6 +8,7 @@ output: html_document
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 
+library(hexbin)
 library(tidyverse)
 library(janitor)
 library(here)
@@ -22,7 +23,10 @@ ces <- read_csv(here("data", "ces3demographics .csv")) %>%
 ```{r}
 ggplot(data = ces, aes(x = white_percent, y = ces_3_0_score)) +
   geom_hex() +
-  labs(x = "% White", y = "CalEnviroScreen Pollution Burden Score")
+  labs(x = "% White", y = "CalEnviroScreen Pollution Burden Score") +
+  scale_fill_gradient(low = "darkorchid4", high = "magenta") + 
+  theme_minimal()
+
 ```
 
 
